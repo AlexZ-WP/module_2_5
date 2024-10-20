@@ -1,18 +1,14 @@
 def get_matrix(n, m, value):
     matrix = []
-    i = n
-    j = m
+    if n <= 0 or m <= 0 or value <= 0:
+        return []
     for i in range(n):
-        row = []
+        matrix.append([])
         for j in range(m):
-            row.append(value)
-            matrix.append(row)
+            matrix[i].append(value)
 
 
-            # if value >= 0:
-            #     print('[]')
-
-        return matrix
+    return matrix
 matrix = get_matrix(2, 2, value=10)
 print(matrix)
 matrix = get_matrix(3, 5, value=42)
